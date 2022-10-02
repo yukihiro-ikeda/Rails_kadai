@@ -8,8 +8,8 @@
 <% @posts.each do |post| %>
   <tr>
     <td><%= post.content %></td>
-
     <td><%= link_to 'つぶやきを確認する', post_path(post.id) %></td>
+    <td><%= link_to "つぶやきを編集する", edit_post_path(post.id) %></td>
   </tr>
 <% end %>
 </table>

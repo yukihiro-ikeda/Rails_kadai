@@ -11,6 +11,19 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      redirect_to posts_path, notice: "ブログを編集しました！"
+    else
+      render :edit
+    end
+  end
+
   def create
     Post.create(content: params[:post][:content])
     @post = Post.new(post_params)
