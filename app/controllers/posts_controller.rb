@@ -13,7 +13,12 @@ class PostsController < ApplicationController
 
   def create
     Post.create(content: params[:post][:content])
+    @post = Post.new(post_params)
+    if @post.save
     redirect_to new_post_path
+    else
+      render :new
+    end
   end
 
   private
