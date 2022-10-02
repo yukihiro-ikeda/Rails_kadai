@@ -1,5 +1,19 @@
-<h1>投稿一覧</h1>
-
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Achieve</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="/Users/yukihiroikeda/workspace/soliloquy/app/assets/stylesheets/posts.scss">
+</head>
+<body>
+  <header>
+    <p>つぶやきアプリ</p>
+  </header>
+  
+  <h1>つぶやき一覧</h1>
+  <%= image_tag "pazzule.jpg", size:'1000x500' %>
 <table>
   <tr>
     <th>内容</th>
@@ -14,4 +28,14 @@
   </tr>
 <% end %>
 </table>
+
 <%= link_to '新しくつぶやきを投稿する', new_post_path %>
+     
+
+  </section>
+
+  <footer>
+	<p>Copyright &copy; 2022 DIC.</p>
+  </footer>
+</body>
+</html>
